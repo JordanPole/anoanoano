@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "526685628671",
+    "project_id": "budgettracker-9918f",
+    "storage_bucket": "budgettracker-9918f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526685628671:android:b84db1f526ba3b085644ca",
+        "android_client_info": {
+          "package_name": "com.example.budgettracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmJijTZA6NhRz6H712cWt8jIevXovMYU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

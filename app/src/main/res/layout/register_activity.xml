@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegisterActivity"
+    android:background="@color/light_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_head"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Registration Deets"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_name"
+            android:layout_below="@id/register_head"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/defaultGray"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Full Name*"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_name"
+            android:hint="Enter your full name"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_below="@+id/register_name"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_email"
+            android:layout_below="@id/edit_name"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/defaultGray"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Email*"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_email"
+            android:hint="Enter your email"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_below="@+id/register_email"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_birth"
+            android:layout_below="@id/edit_email"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/defaultGray"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Date of Birth (dd/mm/yyyy)*"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_birth"
+            android:hint="Select your date of birth"
+            android:inputType="date"
+            android:focusable="false"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_below="@+id/register_birth"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_gender"
+            android:layout_below="@id/edit_birth"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/defaultGray"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Gender*"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup"
+            android:layout_below="@id/register_gender">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_female"
+                android:text="Female"
+                android:textSize="16sp"
+                android:textColor="@color/defaultGray"
+                android:buttonTint="@color/black"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_male"
+                android:text="Male"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/defaultGray"
+                android:buttonTint="@color/black"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_mobile"
+            android:layout_below="@id/register_gender"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/defaultGray"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Mobile Number*"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_mobile"
+            android:hint="Enter your mobile number"
+            android:inputType="phone"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_below="@+id/register_mobile"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_password"
+            android:layout_below="@id/edit_mobile"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/defaultGray"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Password*"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_password"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_below="@+id/register_password"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_confirm"
+            android:layout_below="@id/edit_password"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/defaultGray"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Confirm Password*"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_confirm"
+            android:hint="Confirm your password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_below="@+id/register_confirm"
+            android:background="@drawable/border"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_confirm"
+            android:id="@+id/reg_btn"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="70dp"
+            android:backgroundTint="#009688"
+            android:text="Register" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</ScrollView>
