@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -48,6 +49,7 @@ public class UploadProfilePic extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle("Upload Profile Picture");
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
 
@@ -171,7 +173,10 @@ public class UploadProfilePic extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.menu_refresh){
+        if (id == android.R.id.home){
+            NavUtils.navigateUpFromSameTask(UploadProfilePic.this);
+            finish();
+        } else if (id == R.id.menu_refresh){
             startActivity(getIntent());
             finish();
             overridePendingTransition(0,0);

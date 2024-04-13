@@ -3,6 +3,7 @@ package com.example.budgettracker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -52,6 +54,7 @@ public class UpdateProfile extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle("Update Profile Details");
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         progressBar = findViewById(R.id.progressBar);
@@ -69,8 +72,8 @@ public class UpdateProfile extends AppCompatActivity {
         showProfile(firebaseUser);
 
         //upload picture
-        Button buttonProfilePic = findViewById(R.id.btn_upload_profile_pic);
-        buttonProfilePic.setOnClickListener(new View.OnClickListener() {
+        TextView txtProfilePic = findViewById(R.id.txtView_update_picture);
+        txtProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (UpdateProfile.this,UploadProfilePic.class);
@@ -80,8 +83,8 @@ public class UpdateProfile extends AppCompatActivity {
         });
 
         //Update Email
-        Button buttonUpdateEmail = findViewById(R.id.btn_update_email);
-        buttonUpdateEmail.setOnClickListener(new View.OnClickListener() {
+        TextView txtUpdateEmail = findViewById(R.id.txtView_update_email);
+        txtUpdateEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (UpdateProfile.this,UpdateEmail.class);
@@ -261,7 +264,10 @@ public class UpdateProfile extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.menu_refresh){
+        if (id == android.R.id.home){
+            NavUtils.navigateUpFromSameTask(UpdateProfile.this);
+            finish();
+        } else if (id == R.id.menu_refresh){
             startActivity(getIntent());
             finish();
             overridePendingTransition(0,0);

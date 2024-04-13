@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -52,6 +53,7 @@ public class DeleteUser extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle("Delete Profile");
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         progressBar = findViewById(R.id.progressBar);
@@ -240,7 +242,10 @@ public class DeleteUser extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.menu_refresh){
+        if (id == android.R.id.home){
+            NavUtils.navigateUpFromSameTask(DeleteUser.this);
+            finish();
+        } else if (id == R.id.menu_refresh){
             startActivity(getIntent());
             finish();
             overridePendingTransition(0,0);

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:layout_margin="15dp"
-        android:background="@color/white">
+        android:background="#2E86C1">
 
 
         <TextView

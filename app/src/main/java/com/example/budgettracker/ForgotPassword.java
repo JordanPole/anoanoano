@@ -36,6 +36,7 @@ public class ForgotPassword extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle("Forgot Password");
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         editTxtPassReset = findViewById(R.id.reset_email);

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DeleteUser"
-    android:background="@color/light_gray">
+    android:background="#2E86C1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@drawable/mainborder"
             android:padding="15dp"
             android:layout_margin="15dp"
             android:id="@+id/rl_email">
@@ -43,7 +43,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:id="@+id/edit_delete_pass"
                 android:layout_below="@id/txtView_delete_pass"
                 android:hint="Enter your password"
@@ -78,7 +78,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@drawable/mainborder"
             android:layout_margin="15dp"
             android:padding="15dp"
             android:layout_below="@id/rl_email">

@@ -54,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle("Register");
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         Toast.makeText(RegisterActivity.this, "You can register now", Toast.LENGTH_LONG).show();

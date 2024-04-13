@@ -3,6 +3,7 @@ package com.example.budgettracker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class UpdateEmail extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle("Update Profile Details");
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         progressBar = findViewById(R.id.progressBar);
@@ -173,7 +175,10 @@ public class UpdateEmail extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.menu_refresh){
+        if (id == android.R.id.home){
+            NavUtils.navigateUpFromSameTask(UpdateEmail.this);
+            finish();
+        } else if (id == R.id.menu_refresh){
             startActivity(getIntent());
             finish();
             overridePendingTransition(0,0);

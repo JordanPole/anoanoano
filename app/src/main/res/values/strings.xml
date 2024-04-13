@@ -2,4 +2,6 @@
     <string name="app_name">BudgetTracker</string>
     <string name="register"><u>Register</u></string>
     <string name="forgot_password"><u>Forgot password?</u></string>
+    <string name="email"><u>Email</u></string>
+    <string name="display_profile"><u>Display Profile</u></string>
 </resources>
